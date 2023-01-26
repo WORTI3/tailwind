@@ -1,7 +1,12 @@
 ---
 layout: layouts/post.njk
-title: My second post
-description: The second post on the blog
-date: 2020-09-01
+title: Is web-3 the future?
+description: I'm sure you've all heard of crypto? This blog will explore the world of web-3 and the good, the bad and the evil ...
+date: 2023-02-09
+id: 2
+blogTags: [{title: Technology, colour: blue}]
+author: Wortie
 ---
-Hello, here is the body of the post.
+# My First Blog Post
+
+

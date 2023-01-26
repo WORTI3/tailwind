@@ -1,0 +1,3 @@
+{% macro formatDate(date) %}
+  <time datetime="{{ date }}">{{ date | readableDate(date) }}</time>
+{% endmacro %}

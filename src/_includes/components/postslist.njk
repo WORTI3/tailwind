@@ -1,13 +1,19 @@
-<ul>
-  {% for post in postslist %}
-    <li>
-      <strong>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </strong>
-      -
-      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      -
-      <span>{{ post.data.description }}</span>
-    </li>
-  {% endfor %}
-</ul>
+{% from 'macros/_formatDate.njk' import formatDate %}
+{% from 'macros/_postTag.njk' import postTag %}
+
+{% for post in postslist %}
+<div class="mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
+  <img
+    src="https://media.istockphoto.com/id/1093508248/photo/modern-work-table-with-computer-laptop-and-cityscapes-view-from-window-business-concepts-ideas.jpg?b=1&s=170667a&w=0&k=20&c=tE2s9RgqmXEzaKl08g8O95CBb4mrptJspmnqNJ1YSn8="
+    class="aspect-video w-full object-cover"
+    alt=""/>
+  <div class="p-4">
+    <a href="{{ post.url }}">
+    <p class="mb-1 text-sm text-primary-500">{{ post.data.author }} • {{ formatDate(post.date) }}</p>
+    <h3 class="text-xl font-medium text-gray-900">{{ post.data.title }}</h3>
+    <p class="mt-1 text-gray-500">{{ post.data.description }}</p>
+    </a>
+    {{ postTag(post.data.blogTags) }}
+  </div>
+</div>
+{% endfor %}

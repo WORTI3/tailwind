@@ -1,10 +1,18 @@
 ---
-title: Blog
+title: Our Blogs
 layout: layouts/base.njk
 permalink: /blog/
+description: Here is a list of our most recent blogs
 eleventyNavigation:
   key: Blog
   order: 2
 ---
 {% set postslist = collections.posts %}
-{% include "components/postslist.njk" %}
+
+<section class="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap">
+    {% include "components/postslist.njk" %}
+    </div>
+  </div>
+</section>
