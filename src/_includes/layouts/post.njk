@@ -1,7 +1,9 @@
 ---
 layout: layouts/base.njk
+backlink: true
 ---
+{% include "../components/line_break.njk" %}
 
-![alt text]({{ image }})
-
-<article>{{ content | safe }}</article>
+<article>
+    {{ content | safe }}    
+</article>

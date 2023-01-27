@@ -1,15 +1,27 @@
 ---
-title: Home
-layout: layouts/base.njk
+title: Hi, I'm Wortie 👋
 ---
+{% extends "layouts/template.njk" %}
 
+{% block mainContent %}
 <div class="space-y-8">
-
-  <div>
-    <p>This is the project's home page. There is a little styling for demonstration purposes only.</p>
-    <p>The navigation might as well be a sidebar, or a floating menu. This template provides the structure, make it yours ✌️</p>
+  <div class="flex w-full items-center font-sans px-4 py-12">
+    <img class="w-20 h-20 rounded-full mr-4" src="/img/avatar.png" alt="Avatar of Author">
+    <div class="flex-1 px-2">
+        <p class="text-base font-bold md:text-xl leading-none mb-2">{{ author }}</p>
+        <h1 class="font-sans font-bold text-md">{{ title }}</h1>
+        <p class="text-gray-600 text-xs md:text-base font-semibold">Welcome to my CV and Blog site</p>
+    </div>
+    <div class="justify-end">
+        <button class="bg-transparent border border-gray-500 py-2 px-4 hover:border-orange font-sans font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:text-orange hover:shadow-lg focus:bg-mustard focus:text-gray-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange active:shadow-lg transition duration-150 ease-in-out">Scout my CV</button>
+    </div>
   </div>
 
+  <iframe src="/img/cv.pdf#toolbar=0" class="w-[100%] h-[600px]"></iframe>
 
-  <a href="https://github.com/tomreinert/minimal-11ty-tailwind-starter" class="inline-block uppercase rounded bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white text-sm">Download on github</a>
+  {% include "components/line_break.njk" %}
+  {% include "components/author.njk" %}
+
+
 </div>
+{% endblock %}

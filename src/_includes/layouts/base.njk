@@ -1,54 +1,18 @@
+{% extends "layouts/template.njk" %}
+
 {% from 'macros/_postTag.njk' import postTag %}
+{% from 'macros/_postNav.njk' import postNav %}
 
-<!doctype html>
-<html lang="en">
-  <head>
+{% block mainContent %}
+  {% include "../components/header.njk" %}
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Some testing eleventy site">
-    <meta name="author" content="Wortie">
-
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-    <meta property="og:site_name" content="" /> <!-- website name -->
-    <meta property="og:site" content="" /> <!-- website link -->
-    <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
-
-    <title>{{ title }} | Wortie</title>
-    <link rel="stylesheet" type="text/css" href="/assets/main.css"/>
-    {# TODO #}
-    <link rel="icon" href="images/favicon.png"> 
-  </head>
-
-  <body class="bg-deep-space">
-    {% include "../components/navigation.njk" %}
-    <main class="p-12 bg-white-smoke">
-      <div class="-mx-4 flex flex-wrap justify-center">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-            {% if id %}
-              <span class="text-secondry mb-2 block text-lg font-semibold">
-                Blog #{{ id }}
-              </span>
-            {% endif %}
-            <h2 class="text-dark text-3xl font-bold sm:text-4xl md:text-[40px]">
-              {{ title }}
-            </h2>
-            <div class="-mx-4 mb-2 flex flex-wrap justify-center">
-            {{ postTag(blogTags) }}
-            </div>
-            <p class="text-body-color text-base">
-              {{ description }}
-            </p>
-          </div>
-        </div>
-      </div>
+  {# .md content #}
+  <p class="py-6 font-sans">
       {{ content | safe }}
-    </main>
-    <script src="/assets/main.js" defer></script>
-  </body>
-  {% include "../components/footer.njk" %}
-</html>
+  </p>
+
+  {% include "../components/author.njk" %}
+  {% include "../components/line_break.njk" %}
+  {# todo: next and previous URL's / titles #}
+  {{ postNav({next: true, back: true}) }}
+{% endblock %}
