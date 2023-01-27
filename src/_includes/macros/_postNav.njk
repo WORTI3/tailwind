@@ -1,0 +1,16 @@
+{% macro postNav(params) %}
+<div class="font-sans flex justify-between content-center px-4 pb-12">
+    {% if params.back %}
+    <div class="text-left">
+        <span class="text-xs md:text-sm font-normal text-gray-600">&lt; Previous Post</span><br>
+        <p><a href="#" class="break-normal text-base md:text-sm text-orange font-bold no-underline hover:underline">Blog title</a></p>
+    </div>
+    {% endif %}
+    {% if params.next %}
+    <div class="text-right">
+        <span class="text-xs md:text-sm font-normal text-gray-600">Next Post &gt;</span><br>
+        <p><a href="#" class="break-normal text-base md:text-sm text-orange font-bold no-underline hover:underline">Blog title</a></p>
+    </div>
+    {% endif %}
+</div>
+{% endmacro %}
