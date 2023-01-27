@@ -12,6 +12,9 @@ module.exports = {
       'mustard': '#FFC94B',
       'peach': '#F17A7E',
       'orange': '#F9A66C',
-    }
+      'blue': '#2563eb',
+      'green': '#22c55e',
+      'red': '#f87171'
+    },
   }
 }
