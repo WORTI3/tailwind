@@ -17,5 +17,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Build site
-        run: npm ci
-        run: npm run build
+        run: |
+          npm ci
+          npm run build
