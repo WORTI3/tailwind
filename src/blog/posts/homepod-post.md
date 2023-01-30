@@ -86,12 +86,12 @@ var x = 10;
 
 8. Tables 
 
-    Tables can be generated with headings and text alignment option
+Tables can be generated with headings and text alignment option
 
-    |Stocks|Price|
-    |:-----:|------:|
-    |TCS|230|
-    |YES Bank|500|
+|Stocks|Price|
+|:-----:|------:|
+|TCS|230|
+|YES Bank|500|
 
 
 
