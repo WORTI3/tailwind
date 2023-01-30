@@ -23,6 +23,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: { input: "src", output: "_site/wortie" },
+    pathprefix: "wortie",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"
   };
