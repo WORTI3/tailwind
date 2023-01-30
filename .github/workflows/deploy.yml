@@ -30,3 +30,7 @@ jobs:
         with:
           publish_dir: ./_site/wortie
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy changes to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
