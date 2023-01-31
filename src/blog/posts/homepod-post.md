@@ -29,39 +29,39 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
-   [My Github](https://github.com/bhupendra1011 "all repos") account.[Bhupendra][1] github repo.
+[My Github](https://github.com/bhupendra1011 "all repos") account.[Bhupendra][1] github repo.
 
 5. Images
-    Images can be used just like links. ![Alt txt](img url)
+Images can be used just like links. ![Alt txt](img url)
 
-    !["cat Img"](http://placekitten.com/200/200)
+!["cat Img"](http://placekitten.com/200/200)
 
-    Thumbnails images can also be used which links to larger image 
-    [<img src="http://placekitten.com/20/20">](http://placekitten.com/200/200)
+Thumbnails images can also be used which links to larger image 
+[<img src="http://placekitten.com/20/20">](http://placekitten.com/200/200)
 
 6. Ordered and Unordered Lists
 
-    Coding Best Practices:
+Coding Best Practices:
 
-    * Keep code DRY
-    * Writing Unit Test cases
-    * Checking cross-browser support
+* Keep code DRY
+* Writing Unit Test cases
+* Checking cross-browser support
 
-    Steps to merge branch:
+Steps to merge branch:
 
-    1. Create a branch from feature
-    1. commit your changes
-    1. push your changes
-    1. raise a pull request
+1. Create a branch from feature
+1. commit your changes
+1. push your changes
+1. raise a pull request
 
 7. Code Blocks
 
-    This is super helpful when posting any code snippet
+This is super helpful when posting any code snippet
 
 
-    ```js
-    const fn = () => alert("some fn");
-    ```
+```js
+const fn = () => alert("some fn");
+```
 
 
 
@@ -73,7 +73,7 @@ console.log(foo(5));
 ```
 
 
-    Also can show code difference
+Also can show code difference
 
 
 ```diff
