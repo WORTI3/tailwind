@@ -11,7 +11,8 @@ module.exports = function (eleventyConfig) {
   md.use(require("markdown-it-emoji"));
   eleventyConfig.setLibrary("md", md);
 
-  eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
+  eleventyConfig.addPlugin(require("@11ty/eleventy-navigation"));
+  eleventyConfig.addPlugin(require("eleventy-plugin-time-to-read"));
   eleventyConfig.addPassthroughCopy("src/img");
 
   const { DateTime } = require("luxon");
@@ -24,9 +25,9 @@ module.exports = function (eleventyConfig) {
   return {
     dir: { input: "src", output: "_site/wortie" },
     pathprefix: "wortie",
-    templateFormats : ["njk", "md"],
+    templateFormats: ["njk", "md"],
     dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
   };
 };
