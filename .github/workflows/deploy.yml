@@ -5,7 +5,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  deploy:
+  build_deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
