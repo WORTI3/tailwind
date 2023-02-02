@@ -1,7 +1,8 @@
 {% from 'macros/_formatDate.njk' import formatDate %}
-
-<div class="font-sans">
+{% if id %}
+<div class="font-sans mb-8">
     <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">{{ title }}</h1>
-    <p class="text-sm md:text-base font-normal text-gray-600">{{ formatDate(date) }}{% if id %} • Blog #{{ id }}{% endif %}</p>
-    {{ postTag(blogTags) }}
+    <p class="text-sm md:text-base font-normal text-gray-600">{{ formatDate(date) }} • Blog #{{ id }}</p>
+    <div class="pt-4">{{ postTag(blogTags) }}</div>
 </div>
+{% endif %}
