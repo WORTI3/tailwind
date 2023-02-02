@@ -3,7 +3,7 @@
 <div class="font-sans mb-8">
     <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">{{ title }}</h1>
     <div class="text-sm md:text-base font-normal text-gray-600">
-        <p>{{ formatDate(date) }} • Blog #{{ id }}</p>
+        <p>{{ formatDate(date) }} &#x2022 Blog #{{ id }}</p>
         <p>Reading time: {{ content | timeToRead }}</p>
     </div>
     <div class="pt-4">{{ postTag(blogTags) }}</div>
