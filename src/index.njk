@@ -1,28 +1,25 @@
 ---
-title: Hi, I'm Wortie 👋
+title: Hi, I'm Archie 👋
 permalink: /wortie/
 ---
 {% extends "layouts/template.njk" %}
 
 {% block mainContent %}
-<div class="space-y-8">
-  <div class="flex w-full items-center font-sans px-4 py-12">
-    <img class="w-20 h-20 rounded-full mr-4" src="/img/avatar.png" alt="Avatar of Author">
-    <div class="flex-1 px-2">
-        <p class="text-base font-bold md:text-xl leading-none mb-2">{{ author }}</p>
-        <h1 class="font-sans font-bold text-md">{{ title }}</h1>
-        <p class="text-gray-600 text-xs md:text-base font-semibold">Welcome to my CV and Blog site</p>
-    </div>
-    <div class="justify-end">
-        <button class="bg-transparent border border-gray-500 py-2 px-4 hover:border-orange font-sans font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:text-orange hover:shadow-lg focus:bg-mustard focus:text-gray-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange active:shadow-lg transition duration-150 ease-in-out">Scout my CV</button>
+<div class="space-y-8 mb-10 mt-10">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="/img/avatar.png">
+    
+    <div class="text-center lg:w-2/3 w-full">
+      <h1 class="font-sans mb-4 font-extrabold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange via-slate-400 to-peach">{{ title }}</h1>
+      {# <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-slate-900">{{ title }}</h1> #}
+      <p class="mb-8 leading-relaxed text-slate-600 font-semibold">Welcome to my CV and Blog site</p>
+      <div class="flex justify-center">
+        <a href="#" class="bg-transparent border border-gray-500 py-2 px-4 hover:border-orange font-sans font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:text-orange hover:shadow-lg focus:bg-mustard focus:text-gray-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange active:shadow-lg transition duration-150 ease-in-out">Scout my CV</a>
+        <a href="blog" class="ml-4 bg-transparent border border-gray-500 py-2 px-4 hover:border-orange font-sans font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:text-orange hover:shadow-lg focus:bg-mustard focus:text-gray-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange active:shadow-lg transition duration-150 ease-in-out">Read more</a>
+      </div>
     </div>
   </div>
-
-  <iframe src="/img/cv.pdf#toolbar=0" class="w-[100%] h-[600px]"></iframe>
-
-  {% include "components/line_break.njk" %}
-  {% include "components/author.njk" %}
-
-
 </div>
+
+  
 {% endblock %}
