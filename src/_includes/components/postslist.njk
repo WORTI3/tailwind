@@ -1,19 +1,24 @@
 {% from 'macros/_formatDate.njk' import formatDate %}
 {% from 'macros/_postTag.njk' import postTag %}
 
-{% for post in postslist %}
-<div class="mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
-  <img
-    src="https://media.istockphoto.com/id/1093508248/photo/modern-work-table-with-computer-laptop-and-cityscapes-view-from-window-business-concepts-ideas.jpg?b=1&s=170667a&w=0&k=20&c=tE2s9RgqmXEzaKl08g8O95CBb4mrptJspmnqNJ1YSn8="
-    class="aspect-video w-full object-cover"
-    alt=""/>
-  <div class="p-4">
-    <a href="{{ post.url }}">
-    <p class="mb-1 text-sm text-primary-500">{{ post.data.author }} • {{ formatDate(post.date) }}</p>
-    <h3 class="text-xl font-medium text-gray-900">{{ post.data.title }}</h3>
-    <p class="mt-1 text-gray-500">{{ post.data.description }}</p>
-    </a>
-    {{ postTag(post.data.blogTags) }}
+{% for post in postslist | reverse %}
+<article class="p-6 mb-12 rounded-lg border border-gray-200 shadow-md bg-gradient-to-tl from-slate-600 via-slate-700 to-slate-800 font-sans">
+  <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+  <span class="text-sm sm:hidden text-gray-500">{{ formatDate(post.date) }}</span>
+  <p class="mb-5 font-light text-gray-500 dark:text-gray-400">{{ post.data.description }}</p>
+  <div class="flex justify-between items-center mb-5 text-gray-300">
+      {{ postTag(post.data.blogTags) }}
+      <span class="text-sm smm:hidden">{{ formatDate(post.date) }}</span>
   </div>
-</div>
+  <div class="flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+          <img class="w-7 h-7 rounded-full" src="/img/avatar.png" alt="{{ post.data.author }} avatar" />
+          <span class="font-medium dark:text-white">{{ post.data.author }}</span>
+      </div>
+      <a href="{{ post.url }}" class="inline-flex items-center font-medium text-orange hover:underline">
+        Read more
+        <svg class="ml-2 w-4 h-4 fill-orange" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </a>
+  </div>
+</article>
 {% endfor %}
