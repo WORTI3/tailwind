@@ -1,17 +1,29 @@
 ---
 layout: layouts/post.njk
-title: The 2023 HomePod
-description: Is it the same? Is it really worth £299? Let's have a look .
+title: Will Apprenticeships rule the world?
+description: Apprenticeships are the new way of doing education. They’re cheaper, more flexible, and they’re more engaging. But will they rule the world?
 date: 2023-05-09
 id: 3
 blogTags: [
-    {title: Technology, colour: deep-space},
-    {title: Controversial, colour: red}
+    { title: Education, colour: yellow-500 },
+    { title: Controversial, colour: orange }
     ]
 author: Wortie
 ---
+### Introduction
 
-## h1 Heading 8-)
+Apprenticeships are the new way of doing education. They’re cheaper, more flexible, and they’re more engaging. But will they rule the world?
+
+```bash
+curl --head <URL>
+```
+
+
+If you want to learn how CSP works, check out:
+
+!!! warning Consult a security expert
+The advice and recommended values provided here should be taken as guidance only. Security headers can be complicated, with compounding effects depending on your web application and the diversity of user devices.
+---
 # Basics of Markdown
 Markdown is the most popular markup language that can be used to format documents. It can be used to create *websites*,*ebooks*,*email*,*chats in discussions forums*.
 
