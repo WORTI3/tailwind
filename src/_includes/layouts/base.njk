@@ -1,18 +1,12 @@
 {% extends "layouts/template.njk" %}
 
 {% from 'macros/_postTag.njk' import postTag %}
-{% from 'macros/_postNav.njk' import postNav %}
 
 {% block mainContent %}
+  {% include "../components/backlink.njk" %}
   {% include "../components/header.njk" %}
 
   {# .md content #}
-  <p class="py-6 font-sans">
-      {{ content | safe }}
-  </p>
-
-  {% include "../components/author.njk" %}
-  {% include "../components/line_break.njk" %}
-  {# todo: next and previous URL's / titles #}
-  {{ postNav({next: true, back: true}) }}
+  {{ content | safe }}
+  
 {% endblock %}

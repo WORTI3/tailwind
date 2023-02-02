@@ -1,20 +1,20 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const markdownIt = require("markdown-it");
+const markdown = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-  let mdOptions = {
+  let md = markdown({
     html: true,
     breaks: true,
     linkify: true,
-  };
+    typographer: true,
+  });
 
-  eleventyConfig.setLibrary("md", markdownIt(mdOptions));
+  md.use(require("markdown-it-emoji"));
+  eleventyConfig.setLibrary("md", md);
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
   eleventyConfig.addPassthroughCopy("src/img");
 
   const { DateTime } = require("luxon");
-
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj)
       .setLocale("en-gb")
@@ -24,6 +24,8 @@ module.exports = function (eleventyConfig) {
   return {
     dir: { input: "src", output: "_site/wortie" },
     pathprefix: "wortie",
+    templateFormats : ["njk", "md"],
+    dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"
   };

@@ -1,9 +1,11 @@
 ---
 layout: layouts/base.njk
-backlink: true
 ---
-{% include "../components/line_break.njk" %}
+{% from 'macros/_postNav.njk' import postNav %}
 
-<article>
-    {{ content | safe }}    
-</article>
+<article class="prose prose-slate font-sans hover:prose-a:text-peach">{{ content | safe }}</article>
+
+{% include "../components/author.njk" %}
+{% include "../components/line_break.njk" %}
+{# todo: next and previous URL's / titles #}
+{{ postNav({next: false, back: false}) }}

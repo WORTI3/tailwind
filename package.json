@@ -9,7 +9,7 @@
     "serve:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
     "serve": "npm-run-all clean --parallel serve:*",
     "build:webpack": "webpack --mode production",
-    "build:eleventy": "cross-env ELEVENTY_ENV=production npx eleventy",
+    "build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
     "build": "cross-env NODE_ENV=production run-s clean build:*"
   },
   "keywords": [],
@@ -18,10 +18,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "@toycode/markdown-it-class": "^1.2.4",
     "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "markdown-it": "^13.0.1",
+    "markdown-it-emoji": "^2.0.2",
     "mini-css-extract-plugin": "^0.11.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.14",
