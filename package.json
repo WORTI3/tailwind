@@ -1,12 +1,12 @@
 {
-  "name": "eleventy",
+  "name": "wortie",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf _site",
     "serve:webpack": "webpack --mode development --watch",
-    "serve:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "serve:eleventy": "cross-env ELEVENTY_ENV=development eleventy --pathprefix 'wortie' --serve",
     "serve": "npm-run-all clean --parallel serve:*",
     "build:webpack": "webpack --mode production",
     "build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",

@@ -23,8 +23,11 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    dir: { input: "src", output: "_site/wortie" },
-    // pathprefix: "wortie",
+    dir: { 
+      input: "src",
+      includes: "_includes",
+      output: "_site/wortie" 
+    },
     templateFormats: ["njk", "md"],
     dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
