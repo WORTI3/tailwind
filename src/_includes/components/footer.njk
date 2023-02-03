@@ -3,7 +3,7 @@
 	<div class="container px-5 py-8 text-center w-full md:max-w-3xl mx-auto">
 		<span class="inline-flex sm:ml-auto sm:mt-0 mt-4">
 		{% for item in footer.items %}
-		<a href="{{ item.link }}" title="{{ item.name }}" class="text-white">
+		<a href="{{ item.link | url }}" title="{{ item.name }}" class="text-white">
 			<svg stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 fill-white ml-2" viewBox="0 0 24 24">
 			<path d="{{ item.svg_path }}"></path>
 			{% if item.name == 'LinkedIn' %}
