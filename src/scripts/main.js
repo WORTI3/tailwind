@@ -35,6 +35,6 @@ document.addEventListener("scroll", function () {
   }
 });
 
-document.addEventListener("click", function () {
+document.getElementById("nav-toggle").addEventListener("click", function () {
   document.getElementById("nav-content").classList.toggle("hidden");
 });
