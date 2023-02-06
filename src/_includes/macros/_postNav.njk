@@ -1,15 +1,15 @@
-{% macro postNav(params) %}
+{% macro postNav(back, next) %}
 <div class="font-sans flex justify-between content-center px-4 pb-12">
-    {% if params.back %}
+    {% if back.data %}
     <div class="text-left">
-        <span class="text-xs md:text-sm font-normal text-gray-600">&lt; Previous Post</span><br>
-        <p><a href="#" class="break-normal text-base md:text-sm text-orange font-bold no-underline hover:underline">Blog title</a></p>
+        <span class="text-xs md:text-sm font-normal text-slate-600">&lt; Previous Post #{{ back.data.id }}</span><br>
+        <p><a href="{{ back.url | url }}" class="break-normal text-base md:text-sm text-orange font-bold no-underline hover:underline">{{ back.data.title }}</a></p>
     </div>
     {% endif %}
-    {% if params.next %}
+    {% if next.data %}
     <div class="text-right">
-        <span class="text-xs md:text-sm font-normal text-gray-600">Next Post &gt;</span><br>
-        <p><a href="#" class="break-normal text-base md:text-sm text-orange font-bold no-underline hover:underline">Blog title</a></p>
+        <span class="text-xs md:text-sm font-normal text-slate-600">#{{ next.data.id }} Next Post &gt;</span><br>
+        <p><a href="{{ next.url | url }}" class="break-normal text-base md:text-sm text-orange font-bold no-underline hover:underline">{{ next.data.title }}</a></p>
     </div>
     {% endif %}
 </div>

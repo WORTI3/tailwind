@@ -7,5 +7,17 @@ layout: layouts/base.njk
 
 {% include "../components/author.njk" %}
 {% include "../components/line_break.njk" %}
-{# todo: next and previous URL's / titles #}
-{{ postNav({next: false, back: false}) }}
+
+{% set previousPost = { "data": false, "url": false } %}
+{% set nextPost = { "data": false, "url": false } %}
+{% for post in collections.posts | reverse %}
+    {% if post.data.id == id - 1 %}
+        {% set previousPost = previousPost|setAttribute('data', post.data) %}
+        {% set previousPost = previousPost|setAttribute('url', post.url) %}
+    {% elseif post.data.id == id + 1 %}
+        {% set nextPost = nextPost|setAttribute('data', post.data) %}
+        {% set nextPost = nextPost|setAttribute('url', post.url) %}
+    {% endif %}
+{% endfor %}
+
+{{ postNav(previousPost, nextPost) }}
