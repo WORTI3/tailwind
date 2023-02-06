@@ -5,9 +5,12 @@ description: This blog post will dive deeper into the commonalities and differen
 date: 2023-04-11
 id: 1
 blogTags: [ 
-    {title: Apprentice, colour: orange},
-    {title: Controversial, colour: indigo}
+    { title: Education, colour: teal-500 },
+    { title: Controversial, colour: orange }
     ]
+# tags:
+#   - draft
 author: Wortie
 ---
 Hello, here is the body of the post.
+
