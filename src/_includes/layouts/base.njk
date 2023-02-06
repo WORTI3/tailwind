@@ -3,6 +3,12 @@
 {% from 'macros/_postTag.njk' import postTag %}
 
 {% block mainContent %}
+{# 
+  Dummy colour classes are needed for colours in macro,
+  as the macro doesn't pick up theme colours without 
+  the colour being on the page previously.
+ #}
+ <span class="bg-teal-500"></span>
   {% include "../components/backlink.njk" %}
   {% include "../components/header.njk" %}
 
