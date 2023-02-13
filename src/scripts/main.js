@@ -37,4 +37,5 @@ document.addEventListener("scroll", function () {
 
 document.getElementById("nav-toggle").addEventListener("click", function () {
   document.getElementById("nav-content").classList.toggle("hidden");
+  document.getElementById("main-content").classList.toggle("mt-[12%]");
 });
