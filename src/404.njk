@@ -1,0 +1,24 @@
+---
+title: Page not found
+permalink: 404.html
+eleventyExcludeFromCollections: true
+errorContent: Looks like you've hit a dead-link..
+---
+{# Todo: make better content here for navigation out of page #}
+{% extends "layouts/template.njk" %}
+
+{% block mainContent %}
+<div class="flex items-center justify-center py-24 sm:py-32 lg:px-8">
+  <a href="{{ '/' | url }}">
+  {# _command macro but modify #}
+  <div class="flex items-center justify-between text-gray-800 border border-gray-800 bg-white-smoke max-w-sm font-mono font-semibold text-sm py-3 px-4 w-full rounded-md">
+    <div class="flex gap-1">
+      404:
+      <span>{{ errorContent }}</span>
+    </div>
+    <span class="flex text-gray-800 cursor-pointer w-5 h-5 hover:text-gray-400 duration-200"></span>
+    <span class=" hover:text-orange duration-200">home&rarr;</span>
+  </div>
+  </a>
+</div>
+{% endblock %}
