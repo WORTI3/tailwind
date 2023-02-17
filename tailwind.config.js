@@ -1,12 +1,31 @@
 module.exports = {
   content: [
-    "./src/_includes/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/blog/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/pages/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/index.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
+    "./src/_includes/**/*.{html,md,njk}",
+    "./src/blog/**/*.{html,md,njk}",
+    "./src/pages/**/*.{html,md,njk}",
+    "./src/index.{html,md,njk}",
   ],
   theme: {
     extend: {
+      animation: {
+        notification: 'notif 1.8s infinite ease-in-out'
+      },
+      keyframes: {
+        notif: {
+          '0%': { 
+            transform: 'translateY(0px)',
+            'background-color': '#fecaca'
+          },
+          '28%': { 
+            transform: 'translateY(-7px)',
+            'background-color': '#dc2626'
+          },
+          '44%': { 
+            transform: 'translateY(0px)',
+            'background-color': '#ef4444'
+          }
+        }
+      },
       colors: {
         'deep-space': '#4A6163',
         'white-smoke': '#F9FAF4',
