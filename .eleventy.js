@@ -8,7 +8,8 @@ module.exports = function (eleventyConfig) {
     typographer: true,
   });
 
-  md.use(require("markdown-it-emoji"));
+  md.use(require("markdown-it-emoji"))
+    .use(require("@speedy-js/code-title"));
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPlugin(require("@11ty/eleventy-navigation"));
