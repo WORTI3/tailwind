@@ -1,17 +1,14 @@
 # 11ty CV & Blog site <a href="https://visitor-badge.glitch.me/"><img align="center" src="https://page-views.glitch.me/badge?page_id=WORTI3.wortie"></a>
 
-
 A *very* minimal [eleventy](https://11ty.io/) site using [Tailwind CSS](https://tailwindcss.com/) for styling.
 
 It features a smart navigation component that sets active states automatically.
 
-
-### Hosted on [GitHub Pages](https://)  
+### Hosted on [Vercel](https://https://vercel.com/)
 
 ---
 
 ## Getting Started
-
 
 #### 1. Clone this repo
 
