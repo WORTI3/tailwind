@@ -1,4 +1,4 @@
-# 11ty CV & Blog site <a href="https://visitor-badge.glitch.me/"><img align="center" src="https://page-views.glitch.me/badge?page_id=WORTI3.wortie"></a>
+# 11ty CV & Blog site <img style="float: right; padding: 10px;" src="https://page-views.glitch.me/badge?page_id=WORTI3.wortie">
 
 A *very* minimal [eleventy](https://11ty.io/) site using [Tailwind CSS](https://tailwindcss.com/) for styling.
 
